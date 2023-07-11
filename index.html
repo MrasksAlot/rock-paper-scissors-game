@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors vs the computer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="rules">
+        <h1>Ready for a 2 out of 3 rock-paper-scissors game with the computer?</h1>
+        <img src="./images/rock-paper-scissors-game-rules.png" alt="rules of the game">
+    </div>
+
+    <div class="player-pick">
+
+        <h3>Choose your hand then press Play</h3>
+        <button class="option-button">
+            <img src="./images/rock.svg" alt="Rock">
+        </button>
+
+        <button class="option-button">
+            <img src="./images/paper.svg" alt="Paper">
+        </button>
+
+        <button class="option-button">
+            <img src="./images/scissors.svg" alt="Scissors">
+        </button>
+
+        <button id="start">Play</button>
+
+    </div>
+
+    <div class="score-result">
+        <h3>The computer picked</h3>
+        <span id="result"></span>
+        <h4>Your score is<span id="score-user"></span></h4>
+        <h4>Computer's score is<span id="score-pc"></span></h4>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
