@@ -8,14 +8,15 @@
 </head>
 <body>
 
-    <div class="rules">
-        <h1>Ready for a 2 out of 3 rock-paper-scissors game with the computer?</h1>
-        <img src="./images/rock-paper-scissors-game-rules.png" alt="rules of the game">
-    </div>
+    <section class="container">
+        <div class="rules">
+            <h1> Choose your hand then press Play</h1>
+            <img src="./images/rock-paper-scissors-game-rules.png" alt="rules of the game">
+        </div>
+    </section>
 
+    <section class="container">
     <div class="player-pick">
-
-        <h3>Choose your hand then press Play</h3>
         <button class="option-button">
             <img src="./images/rock.svg" alt="Rock">
         </button>
@@ -31,6 +32,9 @@
         <button id="start">Play</button>
 
     </div>
+</section>
+
+<section class="container">
 
     <div class="score-result">
         <h3>The computer picked</h3>
@@ -38,6 +42,7 @@
         <h4>Your score is<span id="score-user"></span></h4>
         <h4>Computer's score is<span id="score-pc"></span></h4>
     </div>
+</section>
 
 
     <script src="script.js"></script>
