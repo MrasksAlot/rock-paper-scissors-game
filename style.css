@@ -117,7 +117,7 @@
     height: 80px;
   }
   
-  #start {
+  #play-button {
     background-color: #4caf50;
     color: #fff;
     padding: 10px 20px;
@@ -128,7 +128,7 @@
     transition: background-color 0.3s ease;
   }
   
-  #start:hover {
+  #play-button:hover {
     background-color: black;
     color: gold;
   }
@@ -151,7 +151,14 @@
     font-weight: bold;
   }
   
+  #decalre-result {
+    font-weight: 600;
+    color: purple;
+  }
   
+  .declare {
+    color: red;
+  }
 
   /* Media Query for Responsive Styling */
   
