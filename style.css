@@ -65,8 +65,8 @@
     min-height: 100vh;
   }
   
-  .container {s
-    width:8f00px;
+  .container {
+    width:800px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 8px;
@@ -188,6 +188,4 @@
     .score-result h3 {
       font-size: 16px;
     }
-  
-    .score-result h4 {
-    }
+  }

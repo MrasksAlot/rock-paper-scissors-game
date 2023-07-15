@@ -1,12 +1,11 @@
 const COMPUTER_POSSIBILITIES = ["Rock","Paper","Scissors"] ;
+let computerSelection ;
 
 // ****** Function to generate computer pick ******
-let computerSelection = getComputerChoice () ;
 function getComputerChoice () {
     return COMPUTER_POSSIBILITIES[Math.floor(Math.random()*
         (COMPUTER_POSSIBILITIES.length))] ;
     }
-// console.log(computerSelection); //test## make sure getComputerChoice function work
 
 
 
@@ -31,8 +30,6 @@ return playerSelection="Scissors" ;})
 
 
 
-
-
 // ****** Play button function ******
 let playButton = document.querySelector("#play-button");
 let resultSpace = document.querySelector('#decalre-result') ;
@@ -45,9 +42,18 @@ let declareComputerPick = document.querySelector('#decaler-computer-pick') ;
 
 
 playButton.addEventListener('click',() => {
+if (playerSelection===undefined){
+    alert("Kindly choose your hand then press play to avoid Undefined appearing as your pick");
+    
+}
+
+    //generate random computer choice everytime play button is clicked
+    computerSelection = getComputerChoice () ;
+
     //declare picks section (so the player can see what was picked) 
     declarePlayerPick.innerHTML=`${playerSelection}`;
     declareComputerPick.innerHTML=`${computerSelection}`;
+
 
 
     
@@ -65,12 +71,12 @@ playButton.addEventListener('click',() => {
         switch (playerSelection) {
 
             case "Paper":
-            resultSpace.innerHTML=`Player's Paper beats computer's Rock`;
-            break;
+            resultSpace.innerHTML=`Victory! Player's Paper beats computer's Rock`;
+            break
 
             case "Scissors":
-            resultSpace.innerHTML=`Player's Scissors loses to computer's Rock`;
-            break;
+            resultSpace.innerHTML=`Defeat! Player's Scissors loses to computer's Rock`;
+            break
 
         }
     }
@@ -81,13 +87,12 @@ playButton.addEventListener('click',() => {
         switch (playerSelection) {
 
             case "Rock":
-            resultSpace.innerHTML=`Player's Rock loses to computer's Paper`;
-            break;
+            resultSpace.innerHTML=`Defeat! Player's Rock loses to computer's Paper`;
+            break
 
             case "Scissors":
-            resultSpace.innerHTML=`Player's Scissors beats  computer's Rock`;
-            break;
-
+            resultSpace.innerHTML=`Victory! Player's Scissors beats computer's Rock`;
+            break
         }
     }
 
@@ -97,15 +102,28 @@ playButton.addEventListener('click',() => {
         switch (playerSelection) {
 
             case "Rock":
-            resultSpace.innerHTML=`Player's Rock beats  computer's Scissors`;
-            break;
+            resultSpace.innerHTML=`Victory! Player's Rock beats computer's Scissors`;
+            break
 
             case "Paper":
-            resultSpace.innerHTML=`Player's Paper loses to computer's Scissors`;
-            break;
+            resultSpace.innerHTML=`Defeat! Player's Paper loses to computer's Scissors`;
+            break
 
         }
     }
-
 })
+
+// ****** Best out of 5 Score tracker ******
+winOrLoseMsg = document.querySelector(`#win-or-lose`) ;
+let playerScore= 0;
+let computerScore= 0;
+
+
+if (computerSelection === "Rock") {
+    if (playerSelection === "Paper") {++playerScore ;}
+    else if (playerSelection === "Scissors") {++computerScore}
+}
+document.querySelector(`#player-score`).innerHTML=`  ${playerScore}`;
+document.querySelector(`#computer-score`).innerHTML=`  ${computerScore}`;
+
 
