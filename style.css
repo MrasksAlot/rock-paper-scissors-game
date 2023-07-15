@@ -46,6 +46,7 @@
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
+    
   }
 }
 
@@ -64,8 +65,8 @@
     min-height: 100vh;
   }
   
-  .container {
-    width:800px;
+  .container {s
+    width:8f00px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 8px;
